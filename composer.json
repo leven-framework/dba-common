@@ -1,0 +1,13 @@
+{
+  "name": "leven-framework/dba-common",
+  "type": "library",
+  "suggest": {
+    "leven-framework/dba-mock": "Mock a database using e.g. a local file",
+    "leven-framework/dba-mysql": "PDO MySQL adapter"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leven\\DBA\\Common\\": "src/"
+    }
+  }
+}
