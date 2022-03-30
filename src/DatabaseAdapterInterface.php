@@ -22,7 +22,7 @@ interface DatabaseAdapterInterface {
     * @throws DriverException
     * @throws EmptyResultException
     */
-    public function get(string $table, array|string $columns, array $conditions, array $options): DatabaseAdapterResponse;
+    public function get(string $table, array|string $columns = '*', array $conditions = [], array $options = []): DatabaseAdapterResponse;
 
     /**
     * @throws ArgumentValidationException
@@ -34,13 +34,13 @@ interface DatabaseAdapterInterface {
     * @throws ArgumentValidationException
     * @throws DriverException
     */
-    public function update(string $table, array $data, array $conditions, array $options): DatabaseAdapterResponse;
+    public function update(string $table, array $data, array $conditions = [], array $options = []): DatabaseAdapterResponse;
 
     /**
     * @throws ArgumentValidationException
     * @throws DriverException
     */
-    public function delete(string $table, array $conditions, array $options): DatabaseAdapterResponse;
+    public function delete(string $table, array $conditions = [], array $options = []): DatabaseAdapterResponse;
 
 
 
