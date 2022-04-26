@@ -2,7 +2,7 @@
   "name": "leven-framework/dba-common",
   "type": "library",
   "suggest": {
-    "leven-framework/dba-mock": "Mock a database using e.g. a local file",
+    "leven-framework/dba-mock": "Mock a database using an array",
     "leven-framework/dba-mysql": "PDO MySQL adapter"
   },
   "autoload": {
