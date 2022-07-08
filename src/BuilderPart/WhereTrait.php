@@ -11,8 +11,8 @@ trait WhereTrait
 
     public function andWhere(
         string|callable $columnOrGroup,
-        null|string|bool|int|float|array $valueOrOperand = [],
-        null|string|bool|int|float|array $value = [],
+        mixed $valueOrOperand = new DefaultValue,
+        mixed $value = new DefaultValue,
     ): static
     {
         return $this->whereGeneric(false, $columnOrGroup, $valueOrOperand, $value);
@@ -20,8 +20,8 @@ trait WhereTrait
 
     public function orWhere(
         string|callable $columnOrGroup,
-        null|string|bool|int|float|array $valueOrOperand = [],
-        null|string|bool|int|float|array $value = [],
+        mixed $valueOrOperand = new DefaultValue,
+        mixed $value = new DefaultValue,
     ): static
     {
         return $this->whereGeneric(true, $columnOrGroup, $valueOrOperand, $value);
@@ -29,8 +29,8 @@ trait WhereTrait
 
     public function where(
         string|callable $columnOrGroup,
-        null|string|bool|int|float|array $valueOrOperand = [],
-        null|string|bool|int|float|array $value = [],
+        mixed $valueOrOperand = new DefaultValue,
+        mixed $value = new DefaultValue,
     ): static
     {
         return $this->andWhere($columnOrGroup, $valueOrOperand, $value);
@@ -40,8 +40,8 @@ trait WhereTrait
     protected function whereGeneric(
         bool $isOr,
         string|callable $columnOrGroup,
-        null|string|bool|int|float|array $valueOrOperand = [],
-        null|string|bool|int|float|array $value = [],
+        mixed $valueOrOperand = new DefaultValue,
+        mixed $value = new DefaultValue,
         // array types because we need to allow use of null values
     ): static
     {
