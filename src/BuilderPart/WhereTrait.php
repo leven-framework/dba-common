@@ -50,7 +50,7 @@ trait WhereTrait
             $columnOrGroup($conditionBuilder);
             $this->conditions[] = $conditionBuilder;
         }else{
-            $this->conditions[] = ($value === []) ?
+            $this->conditions[] = $value instanceof DefaultValue ?
                 new WhereCondition($isOr, $columnOrGroup, $valueOrOperand) :
                 new WhereCondition($isOr, $columnOrGroup, $value, $valueOrOperand);
         }
